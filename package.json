@@ -1,0 +1,11 @@
+{
+  "name": "typescript-basic",
+  "version": "1.0.0",
+  "description": "Typescript Basic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gustio Nusamba",
+  "license": "ISC"
+}
