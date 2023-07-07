@@ -1,6 +1,6 @@
 describe("Object", function () {
   it("should support an object", function () {
-    const person: { id: string; name: string } = {
+    const person: { id: string; name: string; hobbies?: string[] } = {
       id: "1",
       name: "Gustio",
     };
