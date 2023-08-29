@@ -1,8 +1,8 @@
-import { sayHello } from "../src/say-hello";
+import {sayHello} from "../src/say-hello";
 
-describe("sayHello", () => {
-  it("it should return hello samba", () => {
-    const name = "samba";
-    expect(sayHello(name)).toBe("Hello samba");
-  });
+describe('sayHello', function () {
+    it('should return hello samba', function () {
+        const name = 'samba';
+        expect(sayHello(name)).toBe(`Hello ${name}`);
+    });
 });
