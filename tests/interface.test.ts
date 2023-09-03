@@ -71,4 +71,26 @@ describe("Interface", function () {
 
         console.info(manager);
     });
+
+    it('should support function interface', () => {
+        interface Person {
+            name: string,
+            bonus: number,
+
+            sayHi(name: string): string;
+        }
+
+        const person: Person = {
+            name: "Gustio",
+            bonus: (105 / 100),
+            sayHi: function (name: string): string {
+                let salary = this.bonus * 8000000;
+                return `Hi Mr.${name}, my salary right now is ${salary}`;
+            }
+        }
+
+        console.info(person.sayHi("Manager"));
+    });
+
+
 });
