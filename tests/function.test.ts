@@ -40,4 +40,19 @@ describe('Function', () => {
         expect(call(100)).toBe(100);
         expect(call("Eko")).toBe("Eko");
     });
+
+    it('should support function as parameter', () => {
+        function sortedNumber(num: number[], filter: (value: number[]) => number[]): string {
+            const result = filter(num);
+            return `Sorted number: ${result.join(",")}`;
+        }
+
+        function filterSort(value: number[]): number[] {
+            return value.sort();
+        }
+
+        console.info(sortedNumber([1, 3, 2, 5, 4], filterSort));
+
+        expect(sortedNumber([1, 3, 2, 5, 4], filterSort)).toBe("Sorted number: 1,2,3,4,5");
+    });
 });
