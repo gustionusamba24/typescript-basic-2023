@@ -1,5 +1,6 @@
 import {Seller} from "../src/seller";
 import {Employee, Manager} from "../src/employee";
+import {Person} from "../src/person";
 
 describe("Interface", function () {
     it("should support an interface", function () {
@@ -73,12 +74,7 @@ describe("Interface", function () {
     });
 
     it('should support function interface', () => {
-        interface Person {
-            name: string,
-            bonus: number,
 
-            sayHi(name: string): string;
-        }
 
         const person: Person = {
             name: "Gustio",
@@ -109,5 +105,16 @@ describe("Interface", function () {
         }
 
         console.info(domain);
+    });
+
+    it('should support type assertion', () => {
+        const person: any = {
+            name: "Agus",
+            age: 30,
+        }
+
+        const person2: Person = person as Person;
+        console.info(person2);
+
     });
 });
