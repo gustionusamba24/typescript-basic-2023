@@ -92,5 +92,22 @@ describe("Interface", function () {
         console.info(person.sayHi("Manager"));
     });
 
+    it('should support intersection interface', () => {
+        interface HasName {
+            name: string;
+        }
 
+        interface HasId {
+            id: string;
+        }
+
+        type Domain = HasName & HasId;
+
+        const domain: Domain = {
+            id: "1",
+            name: "Gustio"
+        }
+
+        console.info(domain);
+    });
 });
