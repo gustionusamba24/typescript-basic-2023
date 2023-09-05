@@ -25,4 +25,19 @@ describe('Function', () => {
 
         expect(sum(1, 2, 3, 4, 5)).toBe(15);
     });
+
+    it('should support function overloading', () => {
+        function call(value: string): string;
+        function call(value: number): number;
+        function call(value: any) {
+            if (typeof value === "number") {
+                return value;
+            } else if (typeof value === "string") {
+                return value;
+            }
+        }
+
+        expect(call(100)).toBe(100);
+        expect(call("Eko")).toBe("Eko");
+    });
 });
